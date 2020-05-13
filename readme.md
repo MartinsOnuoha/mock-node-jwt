@@ -1,7 +1,11 @@
 # Mock Node JWT
 > This is only a mock server with !JWT implementation.
 
+## BaseURL:
+- `https://thawing-savannah-73858.herokuapp.com/`
+
 - [Mock Node JWT](#mock-node-jwt)
+  - [BaseURL:](#baseurl)
   - [Home Route](#home-route)
   - [Get A Token](#get-a-token)
   - [Access Protected Route](#access-protected-route)
