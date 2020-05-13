@@ -38,6 +38,12 @@ app.post('/auth', (req, res) => {
 app.get('/restricted', (req, res) => {
   const tokenA = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFudGhvbnkgVmFsaWQgVXNlciIsImlhdCI6MTQyNTQ3MzUzNX0.KA68l60mjiC8EXaC2odnjFwdIDxE__iDu5RwLdN1F2A'
   const { authorization } = req.headers;
+  if (!authorization) {
+    return res.json({
+      error: false,
+      msg: 'no auth header',
+    });
+  }
   const token = authorization.substr(7);
   if (!token) {
     return res.json({
